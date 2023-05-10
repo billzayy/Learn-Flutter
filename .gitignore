@@ -1,0 +1,6 @@
+.dart_tool
+buid
+ios
+.flutter-plugin
+.flutter-plugins-dependencies
+pubspec.lock
