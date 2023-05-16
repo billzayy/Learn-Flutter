@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
               scrollDirection: Axis.vertical,
               children: <Widget>[
                 for (int i = 0; i < basic.length; i++)
-                  DemoSection(string: '${basic[i]}')
+                  DemoSection(string: basic[i])
               ],
             )));
   }
@@ -91,46 +91,46 @@ class DemoSection extends StatelessWidget {
 }
 
 Widget chooseSection(String string) {
-  var result;
+  Widget result;
   switch (string) {
     case "Container":
-      result = ContainerDemo();
+      result = const ContainerDemo();
       break;
     case "Row":
-      result = RowDemo();
+      result = const RowDemo();
       break;
     case "Scaffold":
-      result = ScaffoldDemo();
+      result = const ScaffoldDemo();
       break;
     case "Text":
-      result = TextDemo();
+      result = const TextDemo();
       break;
     case "Wrap":
-      result = WrapDemo();
+      result = const WrapDemo();
       break;
     case "Button":
-      result = ButtonDemo();
+      result = const ButtonDemo();
       break;
     case "Radio Button":
-      result = RadioButtonDemo();
+      result = const RadioButtonDemo();
       break;
     case "Grid View":
       result = GridViewDemo();
       break;
     case "Snack Bar":
-      result = SnackBarDemo();
+      result = const SnackBarDemo();
       break;
     case "File Picker":
-      result = FilePickerDemo();
+      result = const FilePickerDemo();
       break;
     case "Video Picker":
-      result = VideoWidget(videoUrl: 'https://firebasestorage.googleapis.com/v0/b/chat-app2-e7dec.appspot.com/o/file%2FVID_20221019_084804.mp4?alt=media&token=7bcf8589-8eea-4ad9-ac22-54de3e641769',);
+      result = const VideoWidget(videoUrl: 'https://firebasestorage.googleapis.com/v0/b/chat-app2-e7dec.appspot.com/o/file%2FVID_20221019_084804.mp4?alt=media&token=7bcf8589-8eea-4ad9-ac22-54de3e641769',);
       break;
     case "Advanced":
       result = AdvancedDemo();
       break;
     default:
-      result = Text("Hello World!");
+      result = const Text("Hello World!");
       break;
   }
   return result;

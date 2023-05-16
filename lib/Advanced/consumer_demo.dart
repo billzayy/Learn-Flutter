@@ -52,7 +52,7 @@ class ConsumerContent extends StatelessWidget {
       builder: (context, varSetting, child) {
       return Scaffold(
           appBar: AppBar(
-            title: Text("Consumer Demo"),
+            title: const Text("Consumer Demo"),
             backgroundColor: varSetting.color,
             actions: [
               Builder(
@@ -91,7 +91,7 @@ class ConsumerContent extends StatelessWidget {
             child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("${varSetting.text}"),
+              Text(varSetting.text),
               ElevatedButton(
                 onPressed: () {
                   varSetting.changeText();

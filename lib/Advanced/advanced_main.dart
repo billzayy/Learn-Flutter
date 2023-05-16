@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 import 'provider_demo.dart';
 import 'moveScreen.dart';
@@ -35,12 +34,12 @@ class AdvancedDemo extends StatelessWidget {
               scrollDirection: Axis.vertical,
               children: <Widget>[
                 for (int i = 0; i < advanced.length; i++)
-                  DemoSection(string: '${advanced[i]}')
+                  DemoSection(string: advanced[i])
               ],
             ),
           floatingActionButton: FloatingActionButton(
               onPressed: () => Navigator.pop(context),
-              child: Icon(Icons.arrow_back)),
+              child: const Icon(Icons.arrow_back)),
       )
     );
   }
@@ -72,25 +71,25 @@ class DemoSection extends StatelessWidget {
 }
 
 Widget chooseSection(String string) {
-  var result;
+  StatelessWidget result;
   switch (string) {
     case "Provider":
-      result = ProviderDemo();
+      result = const ProviderDemo();
       break;
     case "Move Screen":
-      result = MoveScreenDemo();
+      result = const MoveScreenDemo();
       break;
     case "Consumer":
-      result = ConsumerDemo();
+      result = const ConsumerDemo();
       break;
     case "MultiProvider":
-      result = MultiProviderDemo();
+      result = const MultiProviderDemo();
       break;
     case "GetX":
-      result = GetXDemo();
+      result = const GetXDemo();
       break;
     default:
-      result = Text("Hello World!");
+      result = const Text("Hello World!");
       break;
   }
   return result;

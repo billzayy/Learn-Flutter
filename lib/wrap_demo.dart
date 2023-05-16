@@ -9,13 +9,13 @@ class WrapDemo extends StatelessWidget {
         title: 'Row Basic',
         home: Scaffold(
             appBar: AppBar(
-              title: Text('Row Basic Demo'),
+              title: const Text('Row Basic Demo'),
             ),
-            body: Center(
+            body: const Center(
               child: Wrap(
               direction: Axis.horizontal,
               alignment: WrapAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 RowBasic(),
                 RowBasic(),
                 RowBasic(),
@@ -27,7 +27,7 @@ class WrapDemo extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () => Navigator.pop(context),
-            child: Icon(Icons.arrow_back)
+            child: const Icon(Icons.arrow_back)
           ),
       ),
     );

@@ -22,7 +22,6 @@ class _PluginRegistrant {
           '`video_player_android` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
-        rethrow;
       }
 
     } else if (Platform.isIOS) {
@@ -33,7 +32,6 @@ class _PluginRegistrant {
           '`video_player_avfoundation` threw an error: $err. '
           'The app may not function as expected until you remove this plugin from pubspec.yaml'
         );
-        rethrow;
       }
 
     } else if (Platform.isLinux) {

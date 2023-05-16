@@ -19,7 +19,7 @@ class MySnackBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SnackBar Demo"),
+        title: const Text("SnackBar Demo"),
         leading: Builder(
           builder: (context) => IconButton(
                 icon: const Icon(Icons.arrow_back),
@@ -32,12 +32,12 @@ class MySnackBar extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Click the alarm button"),
+          const Text("Click the alarm button"),
           ElevatedButton(
             onPressed: () {
               Navigator.pop(building);
             },
-            child: Text("Back to Home"),
+            child: const Text("Back to Home"),
           )
         ],
       )),

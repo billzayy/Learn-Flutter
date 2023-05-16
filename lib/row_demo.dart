@@ -18,10 +18,10 @@ class _RowDemoState extends State<RowDemo> {
           title: const Text('Row Demo'),
           backgroundColor: Colors.amberAccent,
         ),
-        body: Center(
+        body: const Center(
           child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
+              children: <Widget>[
                 RowBasic(),
                 Expanded(flex: 3, child: RowBasic()), // Kéo dãn Widget
                 Expanded(flex: 2, child: RowBasic()),
@@ -29,7 +29,7 @@ class _RowDemoState extends State<RowDemo> {
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () => Navigator.pop(context),
-            child: Icon(Icons.arrow_back)),
+            child: const Icon(Icons.arrow_back)),
       ),
     );
   }

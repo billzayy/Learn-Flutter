@@ -14,7 +14,7 @@ class _RadioButtonDemoState extends State<RadioButtonDemo> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title : Text("Radio Button Demo")
+          title : const Text("Radio Button Demo")
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -23,7 +23,7 @@ class _RadioButtonDemoState extends State<RadioButtonDemo> {
             RadioListTile(
               title: const Text('LGBT'),
               subtitle: const Text('Gioi tinh thu 3'),
-              secondary: Icon(Icons.face),
+              secondary: const Icon(Icons.face),
               tileColor: Colors.white,
               contentPadding: const EdgeInsets.all(10),
               activeColor: Colors.purple,
@@ -39,7 +39,7 @@ class _RadioButtonDemoState extends State<RadioButtonDemo> {
             ),
             ListTile(
               title: const Text('Male'),
-              trailing: Icon(Icons.male),
+              trailing: const Icon(Icons.male),
               leading: Radio(
                 value : 0,
                 groupValue: _gender,
@@ -62,7 +62,7 @@ class _RadioButtonDemoState extends State<RadioButtonDemo> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pop(context),
-          child: Icon(Icons.arrow_back)),
+          child: const Icon(Icons.arrow_back)),
       )
     );
   }

@@ -49,15 +49,15 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(context.watch<CounterProvider>().counter.toString(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 50,
               )),
           ElevatedButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => SecondScreen()));
+                    context, MaterialPageRoute(builder: (_) => const SecondScreen()));
               },
-              child: Text("Go to Second Screen"))
+              child: const Text("Go to Second Screen"))
         ],
       )),
       floatingActionButton: FloatingActionButton(
@@ -85,14 +85,14 @@ class SecondScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(context.watch<CounterProvider>().counter.toString(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 50,
               )),
           ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text("Go to Home Screen"))
+              child: const Text("Go to Home Screen"))
         ],
       )),
       floatingActionButton: FloatingActionButton(

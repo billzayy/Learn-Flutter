@@ -80,9 +80,9 @@ class _FilePickerDemo extends State<FilePickerDemo> {
       print(file.path);
 
       /// normal file
-      File _file = File(result.files.single.path!);
+      File file0 = File(result.files.single.path!);
       setState(() {
-        _fileText = _file.path;
+        _fileText = file0.path;
       });
     } else {
       /// User canceled the picker

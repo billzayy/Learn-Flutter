@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -64,7 +63,7 @@ class TextDemo extends StatelessWidget {
           )),
           floatingActionButton: FloatingActionButton(
               onPressed: () => Navigator.pop(context),
-              child: Icon(Icons.arrow_back)),
+              child: const Icon(Icons.arrow_back)),
         ));
   }
 }

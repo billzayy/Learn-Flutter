@@ -8,12 +8,12 @@ class ButtonDemo extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text("Button Demo"),
+              title: const Text("Button Demo"),
             ),
-            body: Center(
+            body: const Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
+                  children: <Widget>[
                     NormalButton(),
                     ElevatedButtonDemo(),
                     OutLineButtonDemo(),
@@ -36,8 +36,7 @@ class NormalButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom( // Style cach 2
-        primary: Colors.amber,
-        backgroundColor: Colors.lightBlue,
+        foregroundColor: Colors.amber, backgroundColor: Colors.lightBlue,
 
       ),
       child: Container(
@@ -64,14 +63,14 @@ class ElevatedButtonDemo extends StatelessWidget {
       style:ButtonStyle( // => Style cach 1
         backgroundColor: MaterialStateProperty.all<Color>(Colors.redAccent),
 
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(EdgeInsets.all(10)),
+        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(const EdgeInsets.all(10)),
 
         elevation: MaterialStateProperty.all<double>(10),
 
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100),
-            side: BorderSide(color: Colors.red)
+            side: const BorderSide(color: Colors.red)
           )
         )
       ),

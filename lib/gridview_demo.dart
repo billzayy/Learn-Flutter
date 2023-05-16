@@ -18,7 +18,7 @@ class GridViewDemo extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(
-              title: Text("Grid View Demo"),
+              title: const Text("Grid View Demo"),
             ),
             body: GridView(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -37,7 +37,7 @@ class GridViewDemo extends StatelessWidget {
             ),
             floatingActionButton: FloatingActionButton(
               onPressed: () => Navigator.pop(context),
-              child: Icon(Icons.arrow_back)
+              child: const Icon(Icons.arrow_back)
             ),
           ),
         );
